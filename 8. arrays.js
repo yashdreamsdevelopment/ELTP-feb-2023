@@ -86,12 +86,14 @@ subarnasFriends[0].contact = 9874326983247;
 
 
 const computer = ["16GB", "i7 10th gen", "Lenovo"];
+// const { 0: pow, 1: p, 2: c } = computer;
 // const ram = computer[0];
 // const processor = computer[1];
 // const company = computer[2];
 
 // destructure
 const [ram, processor, company] = computer;
+const { 0: pow, 1: p, 2: c } = computer;
 const [, , make] = computer;
 
 // ... rest operator
