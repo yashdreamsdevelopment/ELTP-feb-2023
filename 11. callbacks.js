@@ -76,11 +76,12 @@ const fn = c => c.make === 'lenovo'
 const allLenovos = filterArray(computers, fn);
 
 
-const reduceArray = (array, reducer, initialValue) => {
+const reduceArray = (array, reducer, initialValue = undefined) => {
     if(!array.length) return;
 
-    let i = initialValue ?  1 : 0;
-    let value = initialValue || array[0];
+    let i = initialValue === undefined ?  1 : 0;
+    let value = initialValue === undefined ? array[0] : initialValue;
+
     for(let index = i; index < array.length; index++) {
         value = reducer(value, array[index]);
     }
@@ -89,4 +90,4 @@ const reduceArray = (array, reducer, initialValue) => {
 }
 
 
- 
+console.log(reduceArray([1, 2, 3, 4, 5], (acc, curr) => acc + curr, ""))
