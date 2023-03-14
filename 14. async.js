@@ -29,6 +29,21 @@ const asyncWithCallbacks = (successFn, errorFn) => {
 const responseHandler = response => {
     console.log(response)
     console.log(response[0].name);
+    asyncWithCallbacks(
+        (s) => {
+            asyncWithCallbacks(
+                (s) => {
+                    console.log(s);
+                    asyncWithCallbacks(
+                        (s) => {
+                            console.log(e)
+                        }
+                    );
+                }
+            )
+        },
+        e => {}
+    );
     // process the response
 }
 
@@ -58,9 +73,33 @@ const asyncWithPromises = () => {
     });
 }
 
-const promiseObj = asyncWithPromises();
+// const promiseObj = asyncWithPromises();
 
-promiseObj
-    // .catch(error => console.log(error))
-    // .then(response => console.log(response))
-    .finally(() => console.log('promise over'));
+// promiseObj
+//     .catch(error => console.log(error))
+//     .then(response => {
+//         console.log(response);
+//         return asyncWithPromises();
+//     }).then(r2 => {
+//         console.log('second async with promises')
+//     }).then(r3 => {
+//         console.log('third', r3);
+//     })
+//     .finally(() => console.log('promise over'));
+
+
+// prefered usage
+const asyncWithAsyncAwait = async () => {
+    try {
+        const data = await asyncWithPromises();
+        const data1 = await asyncWithPromises();
+        const data2 = await asyncWithPromises();
+        const data3 = await asyncWithPromises();
+        console.log(data);
+    } catch(e) {
+        console.log(e);
+    } finally {
+        console.log('over');
+    }
+}
+
