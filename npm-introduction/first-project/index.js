@@ -4,12 +4,17 @@
 // cannot destructure default exports directly
 // import utility from "./utility";
 // const { add, diff } = utility;
-import utility, { add } from "./utility.js";
-utility();
+import anything, { add as sum } from "./utility.js";
+import randomWord from 'random-words';
+import { json, Router } from 'express';
 
+// anything();
+
+const random = randomWord();
+console.log(random);
 console.log("running from node");
 
-const addition = add(5, 7);
-const difference = diff(10, 8);
+const addition = sum(5, 7);
+// const difference = diff(10, 8);
 
 console.log(addition, difference);

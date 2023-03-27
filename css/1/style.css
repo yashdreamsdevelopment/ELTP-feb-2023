@@ -1,0 +1,25 @@
+/* use an id to select an element */
+
+
+
+#title {
+    color: red;
+    font-size: 35px;
+    /* background-color: white; */
+}
+
+.sub-title {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: blue;
+    font-size: 30px;
+    font-weight: 900 !important;
+}
+
+h2 {
+    font-weight: 900;
+}
+
