@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.content {
+    /* AVOID USING HEIGHT AT ALL COSTS */
+    /* height and width are applied to block level elements */
+    /* block level elements will STILL occupy the entire width */
+    /* height and width DO NOT affect inline elements */
+    height: 100px;
+    width: 100px;
+
+    background-color: purple;
+    color: white;
+    display: none;
+}
+
+/* space between the content and the border */
+/* background color affects padding as well */
+.padding {
+    background-color: purple;
+    /* padding from ALL sides -> TRBL */
+    /* block level -> works as expected*/
+    /* inline -> top and bottom are going to overlap */
+    padding: 8px;
+    /*       TB  LR */
+    padding: 4px 10px;
+    /*       T   R   B   L */
+    padding: 4px 6px 8px 10px;
+    display: none;
+}
+
+span.padding {
+    background-color: yellow;
+}
+
+.border {
+    border: 10px solid red;
+    display: none;
+}
+
+span.border {
+    border-color: yellow;
+    border-top: 10px solid blue;
+}
+
+.margin {
+    background-color: purple;
+    margin: 10px;
+}

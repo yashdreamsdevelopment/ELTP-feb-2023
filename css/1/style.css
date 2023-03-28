@@ -1,22 +1,22 @@
 /* use an id to select an element */
-
-
-
 #title {
     color: red;
     font-size: 35px;
     /* background-color: white; */
 }
 
+
+/* use class to select multiple elements */
 .sub-title {
     background-color: black;
     color: white;
 }
 
+/* use tag-name to select all elements of that tag */
 header {
     background-color: blue;
     font-size: 30px;
-    font-weight: 900 !important;
+    font-weight: 900;
 }
 
 h2 {
