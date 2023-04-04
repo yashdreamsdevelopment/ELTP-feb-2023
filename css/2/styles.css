@@ -37,14 +37,21 @@ span.padding {
 .border {
     border: 10px solid red;
     display: none;
+    /* font-size: 0px; */
 }
 
 span.border {
     border-color: yellow;
     border-top: 10px solid blue;
+    /* font-size: 0px; */
 }
 
 .margin {
+    /* display: none; */
     background-color: purple;
     margin: 10px;
+}
+
+.inline-block {
+    display: inline-block;
 }

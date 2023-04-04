@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 16px;
+    border: thin solid rgb(107, 107, 107);
+    border-radius: 4px;
+    position: relative;
+}
+
+.child {
+    padding: 12px;
+    border: 2px solid black;
+    /* margin: 4px 0px; */
+}
+
+.child-1 {
+    background-color: orange;
+    /* causes the element to be moved */
+    /* when position is not static 
+        the top, right, bottom and left properties will have effect
+        position relative makes the element move from its original position
+        other elements will NOT occupy the space of the original position
+
+        */
+    position: relative;
+    top: 120px;
+}
+
+.child-2 {
+    background-color: red;
+    /* 
+        position absolute makes the element move in respect to 
+        its nearest NON STATIC parent
+        it has properties SIMILAR to inline-block
+        other elements will move into its original position
+    */
+    position: absolute;
+    top: 120px;
+}
+
+.child-3 {
+    background-color: teal;
+}
+
+.square {
+    margin: 300px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background-color: red;
+}
+
+.triangle {
+    position: absolute;
+    left: 100%;
+    border: 10px solid transparent;
+    border-left: 10px solid black;
+}
+
+.fixed {
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    background-color: blue;
+    padding: 10px;
+    display: none;
+}
+
+.sticky {
+    position: sticky;
+    top: 20px;
+    /* right: 0px; */
+    background-color: blue;
+    padding: 10px;
+}

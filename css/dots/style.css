@@ -1,0 +1,45 @@
+.dots {
+    --side: 8px;
+    position: relative;
+    display: inline-block;
+    height: var(--side);
+    width: var(--side);
+}
+
+.dot {
+    position: absolute;
+    padding: var(--side);
+    border-radius: 50%;
+    border: thin solid;
+    left: 0;
+    top: 0;
+}
+
+.dot-main {
+    background-color: red;
+}
+
+.dot-one {
+    background-color: blue;
+    top: calc(300% + var(--side));
+    left: 0%;
+}
+
+.dot-two {
+    top: calc(260% + var(--side));
+    left: calc(140% + var(--side));
+    background-color: indigo;
+}
+
+.dot-three {
+    top: calc(100% + var(--side));
+    left: calc(350% + var(--side));
+    background-color: violet;
+}
+
+.dot-four {
+    top: 0;
+    left: calc(480% + var(--side));
+    background-color: yellow;
+}
+

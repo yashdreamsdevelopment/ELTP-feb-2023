@@ -1,0 +1,48 @@
+html {
+    font-size: 50px;
+}
+
+.pixels {
+    font-size: 30px;
+    margin: 16px;
+    padding: 8px;
+    background-color: green;
+}
+
+.em {
+    font-size: 30px;
+    /* 1em = 20px */
+
+    /* 20px */
+    margin: 1em;
+
+    /* 0.5 * 20 = 10px */
+    padding: 0.5em;
+    background-color: green;
+}
+
+.rem {
+    font-size: 20px;
+    /* 1em = 20px */
+
+    /* 1rem = 50px */
+    /* 50px */
+    margin: 1rem;
+
+    /* 0.5 * 50 = 25px */
+    padding: 0.5rem;
+    background-color: green;
+}
+
+p {
+    margin: 1rem;
+}
+
+.vh {
+    height: 100vh;
+    background-color: brown;
+}
+
+.vw {
+    width: 100vw;
+}
