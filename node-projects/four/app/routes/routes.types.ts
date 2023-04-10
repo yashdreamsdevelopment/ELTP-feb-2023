@@ -3,6 +3,7 @@ import { Router } from "express";
 export class Route {
     private static paths: string[] = [];
     public path: string;
+
     constructor(
         path: string,
         public router: Router
@@ -17,6 +18,7 @@ export class Route {
             throw new Error(`${path} has already been registered.`);
         }
 
+        Route.paths.push(path);
         this.path = path;
     }
 

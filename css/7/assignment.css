@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    --one-fr: 33.33%;
+}
+
+.vertical {
+    height: 100vh;
+    float: left;
+    width: var(--one-fr);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}

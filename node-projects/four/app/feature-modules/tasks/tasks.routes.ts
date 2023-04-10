@@ -23,5 +23,4 @@ router.delete("/", (req, res, next) => {
     res.send("[delete] task");
 });
 
-
-export default new Route("user", router);
+export default new Route("/task", router);

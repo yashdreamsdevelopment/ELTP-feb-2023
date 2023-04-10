@@ -18,4 +18,4 @@ router.put("/", (req, res, next) => {
 router.delete("/", (req, res, next) => {
     res.send("[delete] task");
 });
-exports.default = new routes_types_1.Route("user", router);
+exports.default = new routes_types_1.Route("/task", router);

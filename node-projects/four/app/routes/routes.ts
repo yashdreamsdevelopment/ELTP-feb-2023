@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { routes } from './routes.data';
+import routes from '../feature-modules/';
 
 export const registerRoutes = (app: Application) => {
     for(let route of routes) {

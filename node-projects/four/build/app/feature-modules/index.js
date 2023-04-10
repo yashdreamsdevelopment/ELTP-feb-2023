@@ -5,7 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_routes_1 = __importDefault(require("./user/user.routes"));
 const tasks_routes_1 = __importDefault(require("./tasks/tasks.routes"));
-exports.default = [
+const routes = [
+    // new Route("/user", UserRouter)
     user_routes_1.default,
-    tasks_routes_1.default
+    tasks_routes_1.default,
 ];
+exports.default = routes;
