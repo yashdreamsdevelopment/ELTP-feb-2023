@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-stretch {
+    flex: 1;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.container {
+    height: 100vh;
+}
+
+.header {
+    padding: 3rem;
+    background-color: aqua;
+}
+
+.left-menu {
+    background-color: beige;
+}
+
+.right-display {
+    flex: 4;
+    position: relative;
+}
+
+.display-item {
+    border: thin solid black;
+}
+
+.absolute-center {
+    position: absolute;
+    padding: 5rem;
+    background-color: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

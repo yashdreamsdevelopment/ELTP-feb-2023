@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    height: 100vh;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}

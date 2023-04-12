@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: initial;
+}
+
+main {
+    /* avoid doing this */
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 2px #eeeeee;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
