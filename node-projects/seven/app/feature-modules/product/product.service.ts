@@ -1,5 +1,8 @@
+import productSchema from "./product.schema"
 
 
-const getProducts = () => {
-    
+const getProducts = () => productSchema.get(p => !p.isDeleted);
+
+export default {
+    getProducts
 }
