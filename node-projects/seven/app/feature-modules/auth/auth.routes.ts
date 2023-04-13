@@ -5,17 +5,7 @@ import { ResponseHandler } from "../../utility/response-handler";
 
 const router = Router();
 
-router.post("/register", [
-    (req: Request, res: Response, next: NextFunction) => {
-        const body = req.body;
-        // check
-    },
-
-    (req: Request, res: Response, next: NextFunction) => {
-        const body = req.body;
-        // check
-    }
-] ,(req: Request, res: Response, next: NextFunction) => {
+router.post("/register", [] ,(req: Request, res: Response, next: NextFunction) => {
     try {
         const user = req.body;
         const result = authService.register(user);
