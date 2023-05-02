@@ -1,0 +1,19 @@
+:root {
+    --primary-background: #0A4D68;
+    --primary-color: #088395;
+    --hover-color: rgb(206, 206, 206);
+}
+
+.btn {
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    background-color: white;
+    color: var(--primary-background);
+    border: thin solid var(--primary-background);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--primary-background);
+}

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.main {
+    min-height: calc(100vh);
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+}
+
+.main-section {
+    box-shadow: 0px 0px 6px 2px #afafaf;
+    padding: 1rem;
+    flex: 1;
+}
+
+.main-section h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.data {
+    flex: 3;
+    padding: 0;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 1;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    border: thin solid transparent;
+    border-bottom-color: #ccc;
+    outline: none;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.btn-container {
+    justify-content: center;
+}
+
+.btn {
+    --btn-color: rgb(45, 45, 217);
+    padding: 0.5rem 1.75rem;
+    border: thin solid var(--btn-color);
+    background-color: white;
+    color: var(--btn-color);
+    border-radius: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.btn--delete {
+    --btn-color: rgb(217, 45, 45);
+}
+
+.btn:hover {
+    background-color: var(--btn-color);
+    color: white;
+}
+
+.btn:active {
+    background-color: rgb(35, 35, 174);
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.data-grid-container {
+    padding: 1rem;
+    min-height: calc(100vh - 6rem);
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+}
+
+.paginator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    padding: 0 1rem;
+}
+
+.paginator span {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.data-grid {
+    width: 100%;
+}
+
+.data-grid th {
+    padding: 0.5rem 0;
+    border-bottom: thin solid #ccc;
+}
+
+.data-grid td {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .63);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .content {
+    padding: 1rem;
+    width: 30%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.content-section {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.content-section:nth-child(1) p {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.content-section:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: rgb(241, 241, 241);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 2px 6px rgba(235, 235, 235, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(10, 10, 134);
+    border-radius: 30px;
+}
