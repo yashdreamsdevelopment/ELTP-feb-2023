@@ -3,6 +3,7 @@ import { IUser } from "../users/user.types";
 import userService from "../users/user.service";
 import { AUTH_RESPONSE } from "./auth.response";
 import { ICredential } from "./auth.types";
+import { sign } from "jsonwebtoken";
 
 const hashPassword = async (password: string) => {
     const salt = await genSalt(10);
@@ -20,11 +21,17 @@ const register = async (user: IUser) => {
 const login = async (credentials: ICredential) => {
     const user = await userService.get({ email: credentials.email });
     if(!user) throw { };
+
     const didMatch = await compare(credentials.password, user.password);
 
     if(!didMatch) throw { statusCode: 400, message: "INVALID CREDENTIALS" }
 
-    return "logged in";
+    const { JWT_SECRET_KEY } = process.env;
+    const token = sign({ id: user._id, email: user.email }, JWT_SECRET_KEY || "");
+
+    return {
+        token
+    };
 }
 
 export default {

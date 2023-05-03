@@ -1,0 +1,13 @@
+.Friend {
+    padding: 1rem;
+    border: thin solid #cecece;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.Friend__Close {
+    background-color: gold;
+}

@@ -1,0 +1,10 @@
+.FriendContainer,
+.ServerContainer {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.FriendContainer {
+    flex-direction: column;
+}
