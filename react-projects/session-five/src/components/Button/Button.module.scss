@@ -1,0 +1,14 @@
+.Button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: thin solid black;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 16px;
+    color: black;
+    cursor: pointer;
+
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
