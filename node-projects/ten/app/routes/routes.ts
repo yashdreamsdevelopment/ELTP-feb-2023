@@ -1,9 +1,11 @@
 import { Application, NextFunction, Request, Response, json } from "express";
-import { routes } from "./routes.data";
+import { excludedPaths, routes } from "./routes.data";
 import { ResponseHandler } from "../utility/response-handler";
+import { authorize } from "../utility/authorize";
 
 
 export const registerRoutes = (app: Application) => {
+    app.use(authorize(excludedPaths));    
     app.use(json());
 
     for(let route of routes) {

@@ -16,3 +16,10 @@ export class Route {
 }
 
 export type Routes = Route[];
+
+interface IExcludedPath {
+    path: string;
+    method: "POST" | "PATCH" | "GET" | "DELETE" | "PUT";
+}
+
+export type ExcludedPaths = IExcludedPath[];
