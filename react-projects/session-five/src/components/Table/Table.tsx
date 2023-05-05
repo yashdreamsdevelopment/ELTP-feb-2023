@@ -1,8 +1,8 @@
 import styles from "./Table.module.scss";
+import { ITableProps } from "./Table.types";
 import TableRow from "./TableRow/TableRow";
 
-const Table = () => {
-    console.log(styles)
+const Table = ({ people, onEdit, onDelete }: ITableProps) => {
     return (
         <table className={styles.Table}>
             <thead>
@@ -14,9 +14,16 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                <TableRow />
-                <TableRow />
-                <TableRow />
+                {
+                    people.map(person => {
+                        return <TableRow 
+                            key={person.id}
+                            person={person}
+                            onEdit={() => onEdit(person.id)}
+                            onDelete={() => onDelete(person.id)}
+                        />
+                    })
+                }
             </tbody>
         </table>
     )
