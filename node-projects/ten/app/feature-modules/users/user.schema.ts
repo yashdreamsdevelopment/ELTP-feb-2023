@@ -1,6 +1,7 @@
-import { Schema, model } from 'mongoose';
+import { Types, model } from 'mongoose';
+import { BaseSchema } from '../../utility/base-schema';
 
-const userSchema = new Schema({
+const userSchema = new BaseSchema({
     name: {
         type: String,
         required: true
@@ -17,6 +18,11 @@ const userSchema = new Schema({
     isDeleted: {
         type: Boolean,
         default: false
+    },
+    role: {
+        type: Types.ObjectId,
+        ref: "Role",
+        required: true
     }
 });
 

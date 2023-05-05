@@ -5,6 +5,7 @@ import { ExcludedPaths } from "../routes/routes.types";
 export const authorize = (excludedPaths: ExcludedPaths) => {
     return (req: Request, res: Response, next: NextFunction) => {
         try {
+            console.log(req.path)
             if (excludedPaths.find(p => p.path === req.path && req.method === p.method)) {
                 return next();
             }

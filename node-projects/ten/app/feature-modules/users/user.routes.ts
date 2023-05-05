@@ -1,13 +1,13 @@
 import { Router } from "express";
 import { Route } from "../../routes/routes.types";
-import { authorize } from "../../utility/authorize";
-
+import userService from "./user.service";
+import { ResponseHandler } from "../../utility/response-handler";
 const router = Router();
 
-router.get("/sensitive", authorize, (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try {
-        // IF USER HAS LOGGED IN.
-        res.send("sensitive data sent");
+        const result = await userService.getAll({});
+        res.send(new ResponseHandler(result));
     } catch(e) {
         next(e);
     }
