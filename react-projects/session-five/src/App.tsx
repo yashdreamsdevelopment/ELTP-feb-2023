@@ -6,7 +6,7 @@ import { useState } from "react";
 const App = () => {
 
   // []
-  const peopleState = useState(people);
+  const [peopleData, setPeople] = useState(people);
   // useState return an array of 2 elements
   // [currentValue, setterFunction]
   // currentValue -> current state of the array
@@ -15,19 +15,19 @@ const App = () => {
 
   const deletePerson = (id: string) => {
     console.log(id);
-    const newArr = [...peopleState[0]];
+    const newArr = [...peopleData];
     const personIndex = newArr.findIndex(p => p.id === id);
     if(personIndex === -1) return;
 
     newArr.splice(personIndex, 1);
     // []
-    peopleState[1](newArr);
+    setPeople(newArr);
   }
 
   return (
     <div className="Table">
       <Table 
-        people={people}
+        people={peopleData}
         onEdit={() => {}}
         onDelete={deletePerson}
       />

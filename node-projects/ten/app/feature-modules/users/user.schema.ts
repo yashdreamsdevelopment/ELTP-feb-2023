@@ -1,6 +1,7 @@
 import { Types, model } from 'mongoose';
 import { BaseSchema } from '../../utility/base-schema';
 
+
 const userSchema = new BaseSchema({
     name: {
         type: String,
@@ -14,10 +15,6 @@ const userSchema = new BaseSchema({
     password: {
         type: String,
         required: true
-    },
-    isDeleted: {
-        type: Boolean,
-        default: false
     },
     role: {
         type: Types.ObjectId,

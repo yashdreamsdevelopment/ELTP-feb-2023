@@ -27,7 +27,7 @@ const login = async (credentials: ICredential) => {
     if(!didMatch) throw { statusCode: 400, message: "INVALID CREDENTIALS" }
 
     const { JWT_SECRET_KEY } = process.env;
-    const token = sign({ id: user._id, email: user.email }, JWT_SECRET_KEY || "");
+    const token = sign({ id: user._id, role: user.role }, JWT_SECRET_KEY || "");
 
     return {
         token
