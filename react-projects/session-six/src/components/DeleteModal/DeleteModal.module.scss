@@ -1,0 +1,9 @@
+.Section {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+
+    &:nth-child(3) {
+        justify-content: flex-end;
+    }
+}

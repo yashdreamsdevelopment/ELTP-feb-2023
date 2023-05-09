@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
     } catch(e) {
         next(e);
     }
-})
+});
 
 router.get("/sensitive2", permit([ROLES.ADMIN]),(req, res, next) => {
     try {
@@ -21,7 +21,7 @@ router.get("/sensitive2", permit([ROLES.ADMIN]),(req, res, next) => {
     } catch(e) {
         next(e);
     }
-})
+});
 
 export default new Route(
     "/user",

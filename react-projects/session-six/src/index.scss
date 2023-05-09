@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+%overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    place-items: center;
+}
+
+.Button__Primary {
+    --bg-color: blue;
+    --color: white;
+}
+
+.Button__Secondary {
+    --bg-color: red;
+    --color: white;
+}
+
